@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Sign Up
+
+        p All mandatory fields marked with *
+        // register form
+        form(method='POST' action='/register')
+          div.form-group
+            label(for='firstname') First Name:*
+            input#name.form-control(type='text', placeholder='first name' name='firstname')
+          div.form-group
+            label(for='lastname') Last Name:*
+            input#name.form-control(type='text', placeholder='last name' name='lastname')
+          div.form-group
+            label(for='favoritemovie') Favorite Movie:
+            input#name.form-control(type='text', placeholder='The Room' name='favoritemovie')
+          div.form-group
+            label(for='phonenumber') Phone number:
+            input#name.form-control(type='text', placeholder='888 482-7768' name='phonenumber')  
+          div.form-group
+            label(for='email') Email:*
+            input#email.form-control(type='email', placeholder='name@email.com' name='email')
+          button.btn.btn-primary(type='submit') Sign up
